@@ -325,7 +325,7 @@ $scope.FBLogin = function () {
 		} else {
 			$scope.$apply(function() {
 				$scope.$authData = authData;
-				$scope.data0.user_id = authData.facebook.id;
+				$scope.data0.user_id = authData.facebook.displayName;
 				$scope.isAdmin = true;
 			});
 			console.log("Authenticated successfully with payload:", authData);
@@ -336,7 +336,7 @@ $scope.FBLogin = function () {
 
 
 $scope.FBLogout = function () {
-	$scope.data0.user_id = "fred";
+	$scope.data0.user_id = "anonymous";
 	var ref = new Firebase(firebaseURL);
 	ref.unauth();
 	delete $scope.$authData;
