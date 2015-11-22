@@ -332,7 +332,7 @@ $scope.FBLogin = function () {
 		} else {
 			$scope.$apply(function() {
 				$scope.$authData = authData;
-				$scope.data0.user_name =  authData.facebook.displayname;
+				$scope.data0.user_name =  authData.facebook.displayName;
 				$scope.data0.user_id = authData.facebook.id;
 				$scope.isAdmin = true;
 			});
